@@ -7,7 +7,7 @@ This set of code allows reconstructing accelerated fetal PC MRI data with motion
 
 Brief demo of usage is provided on https://sites.google.com/view/fetalpcmri/home
 
-##Dependencies
+## Dependencies
 GpuNufft      https://github.com/andyschwarzl/gpuNUFFT
 (developed with V2.0.6)
 
@@ -15,7 +15,7 @@ Elastix       https://elastix.lumc.nl/
 (developed with v4.800)
 
 
-##Citation
+## Citation
 Fetal Flow Quantification in Great Vessels Using Motion-Corrected Radial Phase Contrast MRI: Comparison With Cartesian
 Goolaub et al.
 doi: 10.1002/jmri.27334
