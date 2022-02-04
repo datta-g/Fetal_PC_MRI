@@ -17,5 +17,5 @@ Elastix       https://elastix.lumc.nl/
 
 ## Citation
 Fetal Flow Quantification in Great Vessels Using Motion-Corrected Radial Phase Contrast MRI: Comparison With Cartesian
-Goolaub et al.
+Goolaub et al.<br />
 doi: 10.1002/jmri.27334
