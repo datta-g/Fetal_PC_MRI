@@ -3,7 +3,7 @@ Reconstruction for radial PC MRI using Compressed Sensing, Motion Correction and
 
 Brief demo of usage is provided on https://sites.google.com/view/fetalpcmri/home
 
-**Dependencies**
+**Dependencies** \n
 GpuNufft      https://github.com/andyschwarzl/gpuNUFFT
 (developed on V2.0.6)
 
