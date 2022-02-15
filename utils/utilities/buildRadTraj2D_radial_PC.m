@@ -42,9 +42,7 @@ if nargin<5 || isempty(gafl),     gafl     = false; end
 k = [];
 
 % Initial spoke along ky-axis
-% k0 = [zeros(1,no_samples); -floor(no_samples/2):ceil(no_samples/2-1)];
-k0 = [linspace(-(no_samples/2),(no_samples/2),no_samples); zeros(1,no_samples)]; %kx 
-% k0 = [zeros(1,no_samples); linspace(-(no_samples/2),(no_samples/2),no_samples)]; %kx 
+k0 = [zeros(1,no_samples); linspace(-(no_samples/2),(no_samples/2),no_samples)];
 
 % Angle increment
 if gafl
