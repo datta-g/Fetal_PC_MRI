@@ -20,8 +20,8 @@ Fetal Flow Quantification in Great Vessels Using Motion-Corrected Radial Phase C
 Goolaub et al.<br />
 doi: 10.1002/jmri.27334
 
-<pre>
 ## Parameter file: SET_RECON_PARAMS.m
+<pre>
 %% sets reconstruction parameters for reconstruction <br />
   PAR.SaveInterMedRes                 saves intermediate (0: not saving, 1: mat files) <br />
   PAR.verbose                         displays messages during reconstruction (0: off, 1: on) <br />
