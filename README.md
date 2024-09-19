@@ -20,7 +20,7 @@ Fetal Flow Quantification in Great Vessels Using Motion-Corrected Radial Phase C
 Goolaub et al.<br />
 doi: 10.1002/jmri.27334
 
-
+<pre>
 ## Parameter file: SET_RECON_PARAMS.m
 %% sets reconstruction parameters for reconstruction <br />
   PAR.SaveInterMedRes                 saves intermediate (0: not saving, 1: mat files) <br />
@@ -60,3 +60,4 @@ doi: 10.1002/jmri.27334
   PAR.PIPELINE.ResolutionFraction     Reconstructed resolution ratio [0.5 is 50% of scanned resolution, max 1. min 0.1] <br />
   PAR.PIPELINE.MOGPARAM               'single' for single parameter MOG; 'multi' for multiparameter MOG <br />
   PAR.PIPELINE.CINEType               'resort' combines real-times into an estimate of CINE (quick not for analysis); 'CS' uses compressed sensing to compute CINE from raw data <br />
+</pre>
