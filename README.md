@@ -54,10 +54,10 @@ doi: 10.1002/jmri.27334
   PAR.CINE.nite                       number of compressed sensing iterations <br />
   PAR.CINE.CardPhase                  number of cardiac phases in CINE <br />
   PAR.CINE.coilsSelect                flag to use use coils with high signal in central region <br />
-  PAR.CINE.Weights                    coefficient for regularizer 1 for compressed sensing <br />
+  PAR.CINE.Weights                    coefficient for regularizer for compressed sensing <br />
 %% Different reconstruction style <br />
   PAR.PIPELINE.AcquisFraction         Amount of data used as a fraction of overall acqusiition length [0.7 for an acquisition of 1000 spokes uses first 500 spokes in pipeline] <br />
-  PAR.PIPELINE.ResolutionFraction     Reconstructed resolution ratio [0.5 is 50% of scanned resolution, max 1. min 0.1] <br />
+  PAR.PIPELINE.ResolutionFraction     Reconstructed resolution ratio [0.5 is 50% of scanned resolution, max 1, min 0.1] <br />
   PAR.PIPELINE.MOGPARAM               'single' for single parameter MOG; 'multi' for multiparameter MOG <br />
   PAR.PIPELINE.CINEType               'resort' combines real-times into an estimate of CINE (quick not for analysis); 'CS' uses compressed sensing to compute CINE from raw data <br />
 </pre>
