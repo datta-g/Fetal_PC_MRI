@@ -1,0 +1,6 @@
+--- REGISTRATION MODULE --- start.
+Starting motion tracking pipeline for meas_MID00517_FID102612_Radial_PC_ThroughPlane_DAo_150_HYX.
+ROI selection for motion tracking for meas_MID00517_FID102612_Radial_PC_ThroughPlane_DAo_150_HYX.
+Successful ROI selection for motion tracking for meas_MID00517_FID102612_Radial_PC_ThroughPlane_DAo_150_HYX.
+Starting registration for meas_MID00517_FID102612_Radial_PC_ThroughPlane_DAo_150_HYX.
+Frame 39 is frame of reference.

@@ -75,7 +75,7 @@ FETAL_LOGF (PAR.logf, PAR.verbose, 'Frame %d is frame of reference.\n', frame_re
 
 
 % run registration
-[RTR,Reg_transforms,allTransforms] = Motion_Correction_Fetal(RT,ROI.y,ROI.x,frame_ref);
+[RTR,Reg_transforms,allTransforms] = Motion_Correction_Fetal(RT,ROI.y,ROI.x,frame_ref,PAR.MOCORT.REGengine);
 [~,post_reg_cor,simi_mat] = find_reference_frame(double(RTR));
 post_reg_cor = post_reg_cor/max(post_reg_cor);
 

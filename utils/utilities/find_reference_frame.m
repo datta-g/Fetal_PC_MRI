@@ -1,4 +1,5 @@
 function [frame_ref, sumOfCorrel,CorMat] = find_reference_frame(time_series, ROI)
+%DS Goolaub 
 
 time_series = round(double(time_series));
 % preparing ROI coordinates struct

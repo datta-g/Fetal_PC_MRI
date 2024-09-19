@@ -71,6 +71,26 @@ for iMeas=1:length(Header)
         Times=[];
     end
     
+    % make sure even acquisition size
+    if mod(size(KSpace,2),2) == 1
+        KSpace(:,end,:)=[];
+    end
+    
+    % change resolution if needed
+    if PAR.PIPELINE.ResolutionFraction ~= 1
+        frestoremove = size(KSpace,1)*(1-PAR.PIPELINE.ResolutionFraction)/2;
+        KSpace(end-frestoremove+1:end,:,:)=[]; KSpace(1:frestoremove,:,:)=[];
+    end
+    % change acquisition length if needed
+    if PAR.PIPELINE.AcquisFraction < 1
+        dataportion = size(KSpace,2)*PAR.PIPELINE.AcquisFraction;
+        if mod(dataportion,2)== 1
+            dataportion = dataportion + 1;
+        end
+        KSpace = KSpace(:,1:dataportion,:);
+    end
+    
+    
     if isfield(Header{1,iMeas},'noise')
         Noise = Header{1,iMeas}.noise();
         
