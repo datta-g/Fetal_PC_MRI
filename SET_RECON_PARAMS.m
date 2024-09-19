@@ -43,7 +43,7 @@ PAR.MOCORT.regperform = 0;              % status 1 to perform registration, stat
 PAR.MOCORT.REG{1} = TVOP();             % regularizer 1 for compressed sensing
 PAR.MOCORT.REG{2} = TV_Temp();          % regularizer 2 for compressed sensing
 PAR.MOCORT.Weights(1) = 0.008;          % coefficient for regularizer 1 for compressed sensing
-PAR.MOCORT.Weights(2) = 0.08;           % coefficient for regularizer 1 for compressed sensing
+PAR.MOCORT.Weights(2) = 0.08;           % coefficient for regularizer 2 for compressed sensing
 PAR.MOCORT.nite = 15;                   % number of compressed sensing iterations
 PAR.MOCORT.segment = 16;                % number of radial spokes in a real-time window
 PAR.MOCORT.coilsSelect = 1;             % flag to use use coils with high signal in central region
@@ -54,7 +54,7 @@ PAR.MOGRT.perform = 1;                  % status 1 to perform RT recons, status 
 PAR.MOGRT.REG{1} = TVOP();              % regularizer 1 for compressed sensing
 PAR.MOGRT.REG{2} = TV_Temp();           % regularizer 2 for compressed sensing
 PAR.MOGRT.Weights(1) = 0.008;           % coefficient for regularizer 1 for compressed sensing
-PAR.MOGRT.Weights(2) = 0.08;            % coefficient for regularizer 1 for compressed sensing
+PAR.MOGRT.Weights(2) = 0.08;            % coefficient for regularizer 2 for compressed sensing
 PAR.MOGRT.nite = 15;                    % number of compressed sensing iterations
 PAR.MOGRT.segment = 4;                  % number of radial spokes in a real-time window
 PAR.MOGRT.coilsSelect = 1;              % flag to use use coils with high signal in central region
@@ -73,11 +73,11 @@ PAR.CINE.nite = 15;                     % number of compressed sensing iteration
 PAR.CINE.CardPhase = PAR.MOG.CardPhase; % number of cardiac phases in CINE
 PAR.CINE.coilsSelect = 1;               % flag to use use coils with high signal in central region
 PAR.CINE.Weights(1) = 0.025;            % coefficient for regularizer 1 for compressed sensing
-PAR.CINE.Weights(2) = 0.01;             % coefficient for regularizer 1 for compressed sensing
+PAR.CINE.Weights(2) = 0.01;             % coefficient for regularizer 2 for compressed sensing
 
 %% Different reconstruction style
 PAR.PIPELINE.AcquisFraction = 1;        % Amount of data used as a fraction of overall acqusiition length [0.7 for an acquisition of 1000 spokes uses first 500 spokes in pipeline]
-PAR.PIPELINE.ResolutionFraction = 0.25; % Reconstructed resolution ratio [0.5 is 50% of scanned resolution, max 1. min 0.1]
+PAR.PIPELINE.ResolutionFraction = 0.25; % Reconstructed resolution ratio [0.5 is 50% of scanned resolution, max 1, min 0.1]
 PAR.PIPELINE.MOGPARAM = 'single';       % 'single' for single parameter MOG; 'multi' for multiparameter MOG
 PAR.PIPELINE.CINEType = 'resort';       % 'resort' combines real-times into an estimate of CINE (quick not for analysis); 'CS' uses compressed sensing to compute CINE from raw data
 end
