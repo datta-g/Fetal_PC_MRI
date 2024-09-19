@@ -76,7 +76,7 @@ PAR.CINE.Weights(1) = 0.025;            % coefficient for regularizer 1 for comp
 PAR.CINE.Weights(2) = 0.01;             % coefficient for regularizer 2 for compressed sensing
 
 %% Different reconstruction style
-PAR.PIPELINE.AcquisFraction = 1;        % Amount of data used as a fraction of overall acqusiition length [0.7 for an acquisition of 1000 spokes uses first 500 spokes in pipeline]
+PAR.PIPELINE.AcquisFraction = 1;        % Amount of data used as a fraction of overall acqusiition length [0.7 for an acquisition of 1000 spokes uses first 700 spokes in pipeline]
 PAR.PIPELINE.ResolutionFraction = 0.25; % Reconstructed resolution ratio [0.5 is 50% of scanned resolution, max 1, min 0.1]
 PAR.PIPELINE.MOGPARAM = 'single';       % 'single' for single parameter MOG; 'multi' for multiparameter MOG
 PAR.PIPELINE.CINEType = 'CS';           % 'resort' combines real-times into an estimate of CINE (quick not for analysis); 'CS' uses compressed sensing to compute CINE from raw data
