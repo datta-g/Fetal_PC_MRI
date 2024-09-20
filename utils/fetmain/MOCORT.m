@@ -36,7 +36,7 @@ function RT = MOCORT(KSpace, traj, PAR)
 
 % check if recon is to be performed
 FETAL_LOGF (PAR.logf, PAR.verbose, '--- MOCO RT RECON MODULE --- start.\n')
-if ~PAR.MOCORT.perform
+if ~PAR.MOCORT.perform || PAR.PIPELINE.Pseudogating>0
     RT = [];
     FETAL_LOGF (PAR.logf, PAR.verbose, 'MOCO RT recon is off.\n')
     return

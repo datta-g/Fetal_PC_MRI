@@ -39,7 +39,7 @@ function [Reg_transforms, quiescent_period_range, frame_ref] = RegisterRTFrames(
 
 % check if reg is to be performed
 FETAL_LOGF (PAR.logf, PAR.verbose, '--- REGISTRATION MODULE --- start.\n')
-if ~PAR.MOCORT.regperform
+if ~PAR.MOCORT.regperform || PAR.PIPELINE.Pseudogating>0
     Reg_transforms = [];
     quiescent_period_range =[];
     frame_ref = [];

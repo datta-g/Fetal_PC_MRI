@@ -37,8 +37,11 @@ function [MOG_RWaveTimes, resorted_CINE] = FETAL_HR_WITH_MOG(RT, Header, PAR)
 
 % check if recon is to be performed
 FETAL_LOGF (PAR.logf, PAR.verbose, '--- MOG MODULE --- start.\n')
-if ~PAR.MOG.perform
-    MOG_RWaveTimes = [];
+if ~PAR.MOG.perform || PAR.PIPELINE.Pseudogating>0
+    MOG_RWaveTimes = []; resorted_CINE = [];
+    if PAR.PIPELINE.Pseudogating>0
+        MOG_RWaveTimes = 0:PAR.PIPELINE.Pseudogating:(PAR.PIPELINE.Pseudogating+(Header{end}.hdr.Config.NLinMeas*Header{end}.hdr.MeasYaps.alTR{:}/1000));
+    end
     FETAL_LOGF (PAR.logf, PAR.verbose, 'MOG is off.\n')
     return
 end

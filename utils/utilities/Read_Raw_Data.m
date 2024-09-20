@@ -122,6 +122,12 @@ FETAL_LOGF (PAR.logf, PAR.verbose, '--- READ RAW DATA MODULE --- end.\n \n')
 FETAL_LOGF (PAR.logf, PAR.verbose, '--- RECON PARAM SUMMARY --- start.\n')
 params= regexprep(fileread('SET_RECON_PARAMS.m'), '^[%fe].*$', '', 'lineanchors', 'dotexceptnewline');
 FETAL_LOGF (PAR.logf, 1, '%s', regexprep(params, '\n\n+', '\n'))
+
+if PAR.PIPELINE.Pseudogating>0
+    PAR.PIPELINE.CINEType = 'CS';
+    FETAL_LOGF (PAR.logf, PAR.verbose, 'PAR.PIPELINE.CINEType has been forced updated to CS.\n')
+end
+
 FETAL_LOGF (PAR.logf, PAR.verbose, '--- RECON PARAM SUMMARY --- end.\n \n')
 
 end

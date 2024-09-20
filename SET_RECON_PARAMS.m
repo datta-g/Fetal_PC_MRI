@@ -80,4 +80,5 @@ PAR.PIPELINE.AcquisFraction = 1;        % Amount of data used as a fraction of o
 PAR.PIPELINE.ResolutionFraction = 0.25; % Reconstructed resolution ratio [0.5 is 50% of scanned resolution, max 1, min 0.1]
 PAR.PIPELINE.MOGPARAM = 'single';       % 'single' for single parameter MOG; 'multi' for multiparameter MOG
 PAR.PIPELINE.CINEType = 'CS';           % 'resort' combines real-times into an estimate of CINE (quick not for analysis); 'CS' uses compressed sensing to compute CINE from raw data
+PAR.PIPELINE.Pseudogating = 375;        % bypasses MOCO+MOG+realtimes and performs a CINE recon with RR set here. If all steps are desired, set this parameter to 0.
 end

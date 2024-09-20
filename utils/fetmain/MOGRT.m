@@ -38,7 +38,7 @@ function RT = MOGRT(KSpace, traj, PAR)
 
 % check if correction is to be performed
 FETAL_LOGF (PAR.logf, PAR.verbose, '--- MOG RT RECON MODULE --- start.\n')
-if ~PAR.MOGRT.perform
+if ~PAR.MOGRT.perform || PAR.PIPELINE.Pseudogating>0
     RT = [];
     FETAL_LOGF (PAR.logf, PAR.verbose, 'MOG RT recon is off.\n')
     return

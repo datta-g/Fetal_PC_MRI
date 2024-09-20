@@ -40,7 +40,7 @@ function [Corrected_KSpace, Quiescent_traj] = ApplyMotionCorrection(KSpace, traj
 % check if correction is to be performed
 FETAL_LOGF (PAR.logf, PAR.verbose, '--- APPLY MOCO MODULE --- start.\n')
 
-if ~PAR.MOCORT.perform
+if ~PAR.MOCORT.perform || PAR.PIPELINE.Pseudogating>0
     Corrected_KSpace = KSpace;
     Quiescent_traj =traj;
     FETAL_LOGF (PAR.logf, PAR.verbose, 'Correction is off since registration is off.\n')
